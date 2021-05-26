@@ -6,14 +6,14 @@ const {
 
 // Set up GET one, PUT, and DELETE at /api/pizzas/:id
 router
+    // /api/comments/<pizzaId.
   .route('/:pizzaId')
-  .get(addComment)
-  .put(addComment)
+  .post(addComment);
 
 // Set up GET all and POST at /api/pizzas
 router
+    // /api/comments/<pizzaId>/<commentId>
   .route('/:pizzaId/:commentId')
-  .get(getAllPizza)
-  .post(createPizza);
+  .delete(removeComment);
 
 module.exports = router;
